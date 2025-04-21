@@ -138,6 +138,14 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  header {
+    padding: 1rem 0;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
   .burger {
     display: block;
     background: none;
