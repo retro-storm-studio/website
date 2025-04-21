@@ -183,4 +183,10 @@
     margin-top: 0.5rem;
     justify-content: flex-start;
   }
+
+    /* Footer */
+    footer {
+      padding: 0.75rem 0;
+      font-size: 0.85rem;
+    }
 }
