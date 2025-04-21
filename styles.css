@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* Reset some defaults */
 * {
     margin: 0;
@@ -5,56 +8,113 @@
     box-sizing: border-box;
   }
   
+  h1, h2, h3 {
+    font-weight: 700;
+  }
+  
   /* Body styling */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    background-color: #f2f2f2;
+    color: #050f11;
   }
   
+  /* Ensure body and html take the full height */
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
   /* Header */
   header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #050f11;
+    color: #f2f2f2;
+    padding: 1.5rem 0;
   }
   
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 80px;
+    width: auto;
+  }
+  
+  /* Right content container (menu + socials) */
+  .right-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between the nav and socials */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
   }
   
   nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-weight: 700;
   }
   
   nav a:hover {
     text-decoration: underline;
   }
+
+  .socials {
+    display: flex;
+    gap: 1rem;
+  }
   
+  .socials a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .socials a:hover {
+    color: #00aced; /* or whatever color fits your site */
+    transform: scale(1.1);
+  }
+
   /* Main content */
   main {
     max-width: 800px;
     margin: 20px auto;
-    background: #fff;
+    /* background: #fff; */
     padding: 20px;
     border-radius: 8px;
+    flex-grow: 1; /* This will allow the main content to grow and fill up available space */
   }
   
   /* Footer */
   footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #888;
+    background-color: #050f11; /* Adjust background color */
+    color: #f2f2f2; /* Footer text color */
+    text-align: left;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2rem 0;
   }
   
