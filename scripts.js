@@ -18,23 +18,30 @@ document.addEventListener('DOMContentLoaded', function () {
       setMenu(!menu.classList.contains('show'));
     });
 
-    // Close after tapping a link, otherwise the menu covers the section you jumped to.
     menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => setMenu(false));
     });
   }
 
-  /* Trailer. The iframe is only injected on click, so the page ships no
-     player and sets no cookies for visitors who never press play. */
   const trailer = document.getElementById('trailer-player');
 
   if (trailer) {
+    const videoId = trailer.dataset.video;
+    const poster = trailer.querySelector('.trailer-poster');
+
+    if (poster && videoId) {
+      poster.src = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
+      poster.addEventListener('error', function onErr() {
+        poster.removeEventListener('error', onErr);
+        poster.src = 'https://i.ytimg.com/vi/' + videoId + '/hqdefault.jpg';
+      });
+    }
+
     const loadTrailer = () => {
-      const id = trailer.dataset.video;
-      if (!id) return;
+      if (!videoId) return;
 
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0';
       iframe.title = 'Tank Lore announcement trailer';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       iframe.allowFullscreen = true;
