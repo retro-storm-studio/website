@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Ember palette. Every colour in this file resolves through these tokens.
-   Values are tuned for WCAG AA against the surface each sits on (4.5:1 text,
-   3:1 focus) — check any hand-edit against its background. */
 :root {
-  /* dark surfaces + text on them */
   --ink:              #101010;
   --ink-2:            #1a1a1a;
   --ink-rgb:          16, 16, 16;
@@ -12,7 +8,6 @@
   --paper-dim:        #cdc6b8;
   --paper-mute:       #8f8a80;
 
-  /* light surfaces + text on them */
   --light:            #f5f3ef;
   --light-2:          #eae7e0;
   --light-3:          #dbd7ce;
@@ -20,7 +15,6 @@
   --ink-text-2:       #4a4740;
   --ink-text-3:       #6b675e;
 
-  /* light bands always take red: gold darkens to olive */
   --accent:           #e64b43;
   --accent-soft:      #ec736c;
   --accent-on-light:  #bc3830;
@@ -28,7 +22,6 @@
   --on-accent:        #141110;
   --on-accent-dim:    #1f1912;
 
-  /* own token: must clear 3:1 on dark AND light bands */
   --focus:            #e5443b;
 
   --line:             rgba(244, 236, 220, 0.14);
@@ -38,74 +31,6 @@
   --wrap-max:         1200px;
   --band-pad:         5.5rem;
 }
-
-/* ---- Alt: logo cream ----
-:root {
-  /* dark surfaces + text */
-  --ink:              #0e0c0c;
-  --ink-2:            #191514;
-  --ink-rgb:          14, 12, 12;
-  --paper:            #f0e3c2;
-  --paper-dim:        #c9bda0;
-  --paper-mute:       #8e8574;
-
-  /* light surfaces + text */
-  --light:            #f4ecd9;
-  --light-2:          #eae0c6;
-  --light-3:          #ded3b8;
-  --ink-text:         #17130f;
-  --ink-text-2:       #4a4034;
-  --ink-text-3:       #6b5f4e;
-
-  --accent:           #f5c242;
-  --accent-soft:      #ffd472;
-  --accent-on-light:  #b02a22;
-  --accent-2:         #e5443b;
-  --on-accent:        #17130f;
-  --on-accent-dim:    #5c4410;
-  --focus:            #e5443b;
-
-  --line:             rgba(240, 227, 194, 0.14);
-  --line-dark:        rgba(23, 19, 15, 0.16);
-
-  --wrap:             80%;
-  --wrap-max:         1200px;
-  --band-pad:         5.5rem;
-}
----- */
-
-/* ---- Alt: teal + amber (original) ----
-:root {
-  --ink:              #050f11;
-  --ink-2:            #0b1c20;
-  --ink-rgb:          5, 15, 17;
-  --paper:            #f2f2f2;
-  --paper-dim:        #b9c6c9;
-  --paper-mute:       #8a9aa0;
-
-  --light:            #f2f2f2;
-  --light-2:          #e8e8e8;
-  --light-3:          #dcdcdc;
-  --ink-text:         #050f11;
-  --ink-text-2:       #3d4d51;
-  --ink-text-3:       #55666a;
-
-  --accent:           #ffb02e;
-  --accent-soft:      #ffc257;
-  --accent-on-light:  #c97f0a;
-  --accent-2:         #00aced;
-  --on-accent:        #050f11;
-  --on-accent-dim:    #4a3808;
-  --focus:            #1b8fbf;
-
-  --line:             rgba(242, 242, 242, 0.14);
-  --line-dark:        rgba(5, 15, 17, 0.14);
-
-  --wrap:             80%;
-  --wrap-max:         1200px;
-  --band-pad:         5.5rem;
-}
----- */
 
 /* Reset / base */
 * {
@@ -920,6 +845,35 @@ footer {
   .left-content {
     width: 100%;
     flex: none;
+  }
+
+  /* auto-fit collapses to one column here, which turns each square portrait
+     into a full-width block. Row layout instead: small portrait, text beside. */
+  .team {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .member {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: start;
+  }
+
+  .member img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .member h3,
+  .member .role,
+  .member .bio {
+    grid-column: 2;
+  }
+
+  .member h3 {
+    margin-top: 0;
   }
 
   .logo {
