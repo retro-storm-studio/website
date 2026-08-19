@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* Ember palette. Every colour in this file resolves through these tokens.
+   Values are tuned for WCAG AA against the surface each sits on (4.5:1 text,
+   3:1 focus) — check any hand-edit against its background. */
 :root {
   /* dark surfaces + text on them */
   --ink:              #101010;
@@ -737,8 +740,14 @@ main {
 
 .factsheet dl {
   display: grid;
-  grid-template-columns: minmax(110px, auto) 1fr;
+  /* minmax(0, 1fr), not 1fr: a bare 1fr floors at min-content, so long values
+     push the grid wider than the screen instead of wrapping. */
+  grid-template-columns: minmax(110px, auto) minmax(0, 1fr);
   gap: 0.5rem 1.5rem;
+}
+
+.factsheet dd {
+  overflow-wrap: anywhere;
 }
 
 .factsheet dt {
@@ -778,6 +787,7 @@ main {
   font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  overflow-wrap: anywhere;
 }
 
 .contact-card a:hover {
@@ -902,6 +912,14 @@ footer {
   header .container {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* In a column container, flex:1 sizes height, and flex-start shrinks the
+     row to its contents — so space-between has nothing to push against.
+     Full width restores it and sends the burger to the right edge. */
+  .left-content {
+    width: 100%;
+    flex: none;
   }
 
   .logo {
