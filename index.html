@@ -3,58 +3,369 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Storm Studio</title>
+
+  <title>Retro Storm Studio — Tank Lore</title>
+  <meta name="description" content="Retro Storm Studio is an independent game studio and the maker of Tank Lore, a stylized action rogue-lite bullet-hell dungeon crawler for one or two players." />
+  <link rel="canonical" href="https://retrostormstudio.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Retro Storm Studio" />
+  <meta property="og:title" content="Tank Lore — Retro Storm Studio" />
+  <meta property="og:description" content="Play as legendary tank heroes wielding the Legendary Shells in a rebellion against Zeroth's Null Core Empire. Solo or split-screen co-op. Wishlist now on Steam." />
+  <meta property="og:url" content="https://retrostormstudio.com/" />
+  <meta property="og:image" content="https://retrostormstudio.com/imgs/og-tank-lore.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Tank Lore key art: a hero tank firing a Legendary Shell into a dungeon corridor." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@realretrostorm" />
+  <meta name="twitter:title" content="Tank Lore — Retro Storm Studio" />
+  <meta name="twitter:description" content="Play as legendary tank heroes wielding the Legendary Shells in a rebellion against Zeroth's Null Core Empire. Solo or split-screen co-op." />
+  <meta name="twitter:image" content="https://retrostormstudio.com/imgs/og-tank-lore.jpg" />
+
+  <meta name="theme-color" content="#050f11" />
+
   <link rel="icon" type="image/png" href="imgs/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Tank Lore",
+    "url": "https://store.steampowered.com/app/4346700/Tank_Lore/",
+    "genre": ["Action", "Adventure", "Indie"],
+    "gamePlatform": "PC",
+    "operatingSystem": "Windows 10 64-bit or newer",
+    "playMode": ["SinglePlayer", "CoOp"],
+    "publisher": { "@type": "Organization", "name": "Retro Storm Studio" },
+    "author": { "@type": "Organization", "name": "Retro Storm Studio" }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
     <div class="container">
       <div class="left-content">
         <div class="logo-title">
-          <img src="/imgs/logo.png" alt="Retro Storm Studio Logo" class="logo" />
+          <a href="#top" aria-label="Retro Storm Studio home">
+            <img src="imgs/logo.png" alt="Retro Storm Studio" class="logo" />
+          </a>
         </div>
-    
-        <!-- Burger icon for mobile -->
-        <button class="burger" id="burger" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
+
+        <!-- Mobile burger -->
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
       </div>
-     
-      <!-- Right-side content -->
+
+      
       <div class="right-content menu" id="menu">
-        <nav>
+        <nav aria-label="Primary">
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#games">Games</a></li>
+            <li><a href="#game">Game</a></li>
+            <li><a href="#media">Media</a></li>
             <li><a href="#team">Team</a></li>
+            <li><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-  
+
         <div class="socials">
-          <a href="https://discord.gg/xMM8xB7PNc" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://www.instagram.com/retrostormstudio/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/realretrostorm" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.tiktok.com/@retrostormstudio" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://bsky.app/profile/retrostormstudio.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+          <a href="https://discord.gg/xMM8xB7PNc" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/retrostormstudio/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://x.com/realretrostorm" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@retrostormstudio" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          <a href="https://bsky.app/profile/retrostormstudio.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </header>
-  
-  <main>
-    <div class="container">
-    </div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow-amber">Coming soon to Steam</p>
+        <h1 class="hero-title">Tank Lore</h1>
+        <p class="hero-lede">
+          A stylized action rogue-lite bullet-hell dungeon crawler for one or two players.
+          Take up the Legendary Shells and fight the rebellion against Zeroth's Null Core Empire.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://store.steampowered.com/app/4346700/Tank_Lore/" target="_blank" rel="noopener">
+            <i class="fab fa-steam" aria-hidden="true"></i> Wishlist on Steam
+          </a>
+          <a class="btn btn-ghost" href="#trailer">Watch the trailer</a>
+        </div>
+        <!-- <ul class="chip-row">
+          <li class="chip">Single-player</li>
+          <li class="chip">Split-screen co-op</li>
+          <li class="chip">Controller support</li>
+          <li class="chip">Windows</li>
+        </ul> -->
+      </div>
+    </section>
+
+    <!-- Trailer -->
+    <section class="band band-dark trailer-band" id="trailer">
+      <div class="container">
+        <!-- Click-to-load: no YouTube player until asked -->
+        <div class="trailer" id="trailer-player" data-video="ijmAI3TZol0">
+          <img src="imgs/trailer-poster.jpg" alt="Tank Lore announcement trailer" class="trailer-poster" />
+          <button class="trailer-play" type="button" aria-label="Play the Tank Lore announcement trailer">
+            <i class="fas fa-play" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- The game. Copy is verbatim from Steam, minus two typo fixes pending
+         there: "weapons of the" and "as new paths". Keep the two in sync. -->
+    <section class="band band-dark" id="game">
+      <div class="container">
+        <p class="eyebrow eyebrow-amber">The game</p>
+        <h2 class="section-title">About Tank Lore</h2>
+
+        <p class="lede">
+          <strong>Tank Lore</strong> is stylized action rogue-lite bullet-hell dungeon crawler that can
+          be played <strong>solo or co-op</strong> where you play as legendary tank heroes fighting in a
+          rebellion against an evil empire.
+        </p>
+
+        <div class="pillars" data-reveal-group>
+          <article class="pillar" data-reveal>
+            <span class="pillar-rule" aria-hidden="true"></span>
+            <h3>Fight against Evil</h3>
+            <p>
+              As one of the hero tanks you'll wield the powers and weapons of the
+              <strong>Legendary Shells</strong> to fight against <strong>Zeroth</strong>'s
+              <strong>Null Core Empire</strong> as you grow stronger and unlock new powers and
+              abilities. Mix and match core abilities with powerful upgrades liberated from Zeroth's
+              Evil Army!
+            </p>
+          </article>
+
+          <article class="pillar" data-reveal>
+            <span class="pillar-rule" aria-hidden="true"></span>
+            <h3>Wield legendary power!</h3>
+            <p>
+              Move the story forward and unlock new playable hero tanks that wield different and
+              powerful Legendary Shells, each with their unique set of powers, abilities, upgrades,
+              and possible synergies!
+            </p>
+          </article>
+
+          <article class="pillar" data-reveal>
+            <span class="pillar-rule" aria-hidden="true"></span>
+            <h3>Try again and again!</h3>
+            <p>
+              No run is as the last one, as new paths become available. Use the resources you
+              acquire to unlock Modifications that give you a leg up next time to try your mettle
+              against the forces of Zeroth.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media. band-alt separates this from the dark band above. -->
+    <section class="band band-dark band-alt" id="media">
+      <div class="container">
+        <p class="eyebrow eyebrow-amber">Media</p>
+        <h2 class="section-title">Screenshots</h2>
+        <div class="shots" id="shots">
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-01.jpg">
+            <img src="imgs/screenshots/01.webp" alt="A hero tank clearing a room of Null Core drones." loading="lazy" />
+          </button>
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-02.jpg">
+            <img src="imgs/screenshots/02.webp" alt="Two players in split-screen co-op fighting a bullet-hell boss." loading="lazy" />
+          </button>
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-03.jpg">
+            <img src="imgs/screenshots/03.webp" alt="The upgrade screen showing Legendary Shell synergies." loading="lazy" />
+          </button>
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-04.jpg">
+            <img src="imgs/screenshots/04.webp" alt="A procedurally generated dungeon branch with multiple paths." loading="lazy" />
+          </button>
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-05.jpg">
+            <img src="imgs/screenshots/05.webp" alt="A hero tank firing a charged Legendary Shell." loading="lazy" />
+          </button>
+          <button class="shot" type="button" data-full="imgs/screenshots/shot-06.jpg">
+            <img src="imgs/screenshots/06.webp" alt="The Modifications workshop between runs." loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wishlist -->
+    <section class="band band-amber wishlist-band">
+      <div class="container wishlist-inner">
+        <div>
+          <h2 class="wishlist-title">Wishlist Tank Lore</h2>
+          <p class="wishlist-sub">Wishlists are how Steam decides whether to show the game to anyone else. It helps a lot.</p>
+        </div>
+        <a class="btn btn-invert" href="https://store.steampowered.com/app/4346700/Tank_Lore/" target="_blank" rel="noopener">
+          <i class="fab fa-steam" aria-hidden="true"></i> Add to wishlist
+        </a>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="band band-light" id="team">
+      <div class="container">
+        <p class="eyebrow">Studio</p>
+        <h2 class="section-title">Who we are</h2>
+        <p class="lede lede-dark">
+          Retro Storm Studio is a small independent team. Tank Lore is our first game, and we both
+          develop and publish it ourselves.
+        </p>
+
+        <div class="team" data-reveal-group>
+          <article class="member" data-reveal>
+            <img src="imgs/team/marc.jpg" alt="" loading="lazy" />
+            <h3>Lori Loris_last_name</h3>
+            <p class="role">The Role</p>
+            <p class="bio">Does stuff to the game and is Italian.</p>
+          </article>
+
+          <article class="member" data-reveal>
+            <img src="imgs/team/priya.jpg" alt="" loading="lazy" />
+            <h3>Martin and his last name</h3>
+            <p class="role">The Role</p>
+            <p class="bio">He does stuff to the game.</p>
+          </article>
+
+          <article class="member" data-reveal>
+            <img src="imgs/team/tomas.jpg" alt="" loading="lazy" />
+            <h3>Mohazza the last name of Mohazza</h3>
+            <p class="role">Role of Mohazza</p>
+            <p class="bio">Does things that the game wants.</p>
+          </article>
+
+          <article class="member" data-reveal>
+            <img src="imgs/team/nadia.jpg" alt="" loading="lazy" />
+            <h3>Ty Radman</h3>
+            <p class="role">My Role</p>
+            <p class="bio">I add stuff to the game.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press -->
+    <section class="band band-light" id="press">
+      <div class="container">
+        <p class="eyebrow">Press</p>
+        <h2 class="section-title">Press kit</h2>
+        <p class="lede lede-dark">
+          Everything is free to use in coverage, videos and streams. No permission needed, and no
+          revenue-share restrictions on monetised video.
+        </p>
+
+        <div class="press-grid">
+          <a class="press-card" href="press/">
+            <i class="fas fa-folder-open" aria-hidden="true"></i>
+            <h3>Press kit</h3>
+            <p>Fact sheet, descriptions, logos, key art and screenshots, with everything downloadable as a single archive.</p>
+          </a>
+          <a class="press-card" href="mailto:retrostormstudio@gmail.com?subject=Tank%20Lore%20key%20request&amp;body=Outlet%20or%20channel%3A%20%0AURL%3A%20%0AAudience%20size%3A%20%0APlatform%20%28YouTube%2FTwitch%2Fsite%29%3A%20%0AWhen%20you%27d%20publish%3A%20%0AAnything%20else%3A%20%0A">
+            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+            <h3>Request a review key</h3>
+            <p>Tell us where the coverage will run and we'll get back to you. Opens an email with the details we need.</p>
+          </a>
+        </div>
+
+        <div class="factsheet">
+          <h3>Fact sheet</h3>
+          <dl>
+            <dt>Title</dt><dd>Tank Lore</dd>
+            <dt>Developer</dt><dd>Retro Storm Studio</dd>
+            <dt>Publisher</dt><dd>Retro Storm Studio (self-published)</dd>
+            <dt>Release date</dt><dd>Coming soon</dd>
+            <dt>Platforms</dt><dd>PC (Windows, via Steam)</dd>
+            <dt>Genre</dt><dd>Action rogue-lite, bullet hell, twin-stick, dungeon crawler</dd>
+            <dt>Players</dt><dd>1&ndash;2 (single-player, shared/split-screen co-op, Remote Play Together)</dd>
+            <dt>Engine</dt><dd>Unity</dd>
+            <dt>Price</dt><dd>To be announced</dd>
+            <dt>Languages</dt><dd>Interface and subtitles in English, Italian, German, Arabic, Russian, Simplified Chinese, Spanish (Spain and Latin America) and Brazilian Portuguese</dd>
+            <dt>Minimum spec</dt><dd>Windows 10 64-bit, 3 GHz 4-core, 8 GB RAM, GTX 1060 or RX 580</dd>
+            <dt>Recommended</dt><dd>Windows 10 64-bit, 3.5 GHz 6-core, 16 GB RAM, RTX 3060 or RX 6700</dd>
+            <dt>Press contact</dt><dd><a href="mailto:retrostormstudio@gmail.com">retrostormstudio@gmail.com</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="band band-dark" id="contact">
+      <div class="container">
+        <p class="eyebrow eyebrow-amber">Contact</p>
+        <h2 class="section-title">Get in touch</h2>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Press &amp; business</h3>
+            <p>Coverage, review keys, partnerships and publishing.</p>
+            <a href="mailto:retrostormstudio@gmail.com">retrostormstudio@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <h3>Community &amp; support</h3>
+            <p>Bugs, crashes and anything that went wrong in a run. It's also where playtests get announced first, and the fastest way to reach us.</p>
+            <a href="https://discord.gg/xMM8xB7PNc" target="_blank" rel="noopener">Join the Discord</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <div class="container">
-      <p>Copyright &copy; 2026 Retro Storm Studio</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="imgs/logo.png" alt="" class="logo logo-sm" />
+        <p class="footer-legal">
+          Copyright &copy; 2025 Retro Storm Studio. Tank Lore and Retro Storm Studio are trademarks of
+          Retro Storm Studio. All rights reserved.
+        </p>
+        <div class="socials footer-socials">
+          <a href="https://discord.gg/xMM8xB7PNc" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/retrostormstudio/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://x.com/realretrostorm" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@retrostormstudio" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          <a href="https://bsky.app/profile/retrostormstudio.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h2 class="footer-heading">Site</h2>
+        <ul>
+          <li><a href="#game">Game</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#press">Press kit</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
-  
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
+
   <script src="scripts.js"></script>
 </body>
 </html>
