@@ -614,6 +614,10 @@ main {
   color: var(--ink-text-2);
 }
 
+.member .fav-games {
+    margin-top: 0.5rem;
+}
+
 /* Press */
 .press-grid {
   display: grid;
