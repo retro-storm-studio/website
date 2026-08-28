@@ -618,6 +618,36 @@ main {
     margin-top: 0.5rem;
 }
 
+.member-links {
+  display: flex;
+  gap: 0.7rem;
+  margin: -0.15rem 0 0.9rem;
+}
+
+.member-links a {
+  display: inline-flex;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.member-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.member-links img {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  filter: none;
+  background: none;
+}
+
+.member:hover .member-links img {
+  filter: none;
+}
+
 /* Press */
 .press-grid {
   display: grid;
@@ -669,8 +699,6 @@ main {
 
 .factsheet dl {
   display: grid;
-  /* minmax(0, 1fr), not 1fr: a bare 1fr floors at min-content, so long values
-     push the grid wider than the screen instead of wrapping. */
   grid-template-columns: minmax(110px, auto) minmax(0, 1fr);
   gap: 0.5rem 1.5rem;
 }
@@ -843,16 +871,11 @@ footer {
     align-items: flex-start;
   }
 
-  /* In a column container, flex:1 sizes height, and flex-start shrinks the
-     row to its contents — so space-between has nothing to push against.
-     Full width restores it and sends the burger to the right edge. */
   .left-content {
     width: 100%;
     flex: none;
   }
 
-  /* auto-fit collapses to one column here, which turns each square portrait
-     into a full-width block. Row layout instead: small portrait, text beside. */
   .team {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -865,14 +888,12 @@ footer {
     align-items: start;
   }
 
-  .member img {
+  .member > img {
     grid-column: 1;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 5;
   }
 
-  .member h3,
-  .member .role,
-  .member .bio {
+  .member > :not(img) {
     grid-column: 2;
   }
 
