@@ -6,7 +6,7 @@ const TEAM_MEMBERS = [
     bio: 'Does stuff to the game and is Italian.',
     favGames: 'Games Lorenzo likes.',
     links: [
-      { label: 'Bluesky', icon: 'imgs/icons/bluesky.svg', url: 'https://bsky.app/profile/example' },
+      { label: 'Bluesky', icon: 'imgs/icons/bluesky.svg', url: 'https://bsky.app' },
     ],
   },
   {
@@ -36,6 +36,7 @@ const TEAM_MEMBERS = [
     links: [
       { label: 'Portfolio', icon: 'imgs/icons/skeleton.webp', url: 'https://tyradman.github.io/static-portfolio' },
       { label: 'GitHub', icon: 'imgs/icons/github.svg', url: 'https://github.com/TyRadman' },
+      { label: 'LinkedIn', icon: 'imgs/icons/linkedin.svg', url: 'https://www.linkedin.com/in/tyradman/' },
     ],
   },
 ];
