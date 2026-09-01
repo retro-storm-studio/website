@@ -10,12 +10,14 @@ const TEAM_MEMBERS = [
     ],
   },
   {
-    name: 'Martin',
+    name: 'Martin R.',
     role: 'Game Designer',
-    photo: 'imgs/team/02.webp',
-    bio: 'He does stuff to the game.',
-    favGames: 'Games Martin likes.',
-    links: [],
+    photo: 'imgs/team_pics/martin_profile_pic.jpg',
+    bio: 'Tries to find the fun.',
+    favGames: 'One. More. Turn.',
+    links: [
+      { label: 'Portfolio', icon: 'imgs/icons/skeleton.webp', url: 'https://jmartinrh.github.io/web_portfolio/' }
+    ],
   },
   {
     name: 'Mohazza',
