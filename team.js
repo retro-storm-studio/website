@@ -22,10 +22,13 @@ const TEAM_MEMBERS = [
   {
     name: 'Mohazza',
     role: 'Dev/3D Artist',
-    photo: 'imgs/team/03.webp',
-    bio: 'Does things that the game wants.',
-    favGames: 'Games Mohazza likes.',
-    links: [],
+    photo: 'imgs/team_pics/mohazza_profile_pic.jpeg',
+    bio: 'Making games, chasing dreams, and sailing toward the One Piece.',
+    favGames: 'Monster Hunter, Crash Bandicoot, Cuphead, Hollow Knight, Brawlhalla.',
+    links: [
+      { label: 'Portfolio', icon: 'imgs/icons/skeleton.webp', url: 'https://mohazza00.github.io/' },
+      { label: 'GitHub', icon: 'imgs/icons/github.svg', url: '      https://github.com/mohazza00' }
+    ],
   },
   {
     name: 'Ty Radman',
