@@ -2,11 +2,11 @@ const TEAM_MEMBERS = [
   {
     name: 'Lorenzo',
     role: '2D Artist',
-    photo: 'imgs/team/01.webp',
-    bio: 'Does stuff to the game and is Italian.',
-    favGames: 'Games Lorenzo likes.',
+    photo: 'imgs/team_pics/lorenzo_profile_pic.jpeg',
+    bio: '"Don\'t hire your girlfriend to make your Capsule Art." - Chris Zukowski. Hi I\'m the girlfriend, physiks researcher by day artist by day.',
+    favGames: 'Hollow Knight, Minecraft, Pokemon games, League of Legends(shamefully)',
     links: [
-      { label: 'Bluesky', icon: 'imgs/icons/bluesky.svg', url: 'https://bsky.app' },
+      { label: 'GitHub', icon: 'imgs/icons/github.svg', url: 'https://github.com/KenderBlue' },
     ],
   },
   {
